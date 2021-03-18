@@ -1,6 +1,6 @@
-# Project
+# Project FS1030 individule portfolio backend
 
-mysql link https://github.com/machadop1407/Simple-CRUD-React-Node-MySQL/blob/main/server/index.js
+**open the repo https://github.com/shijing0628/FS1030-personal-portfolio-proj test together.**
 
 running at Port 5000, if failed it will auto switch to 3000
 
