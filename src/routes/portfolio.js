@@ -1,3 +1,5 @@
+// This file is for portfolio page CRUD
+
 const express = require("express");
 const db = require("../../connection");
 const router = express.Router();
@@ -43,7 +45,7 @@ router.put("/update/:id", (req, res) => {
   const date_completed = req.body.date_completed;
 
   db.query(
-    "UPDATE portfolio SET proj_name=?, proj_desc=?, creator_name=?,image=?, date_completed=?WHERE id=?",
+    "UPDATE portfolio SET proj_name=?, proj_desc=?, creator_name=?,image=?, date_completed=? WHERE id=?",
     [proj_name, proj_desc, creator_name, image, date_completed, req.params.id],
     (err, result) => {
       if (err) {

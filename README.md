@@ -20,8 +20,16 @@ install dependencies before start or test
 npm install
 ```
 
+<br>
+portfolio backend
+
 ![](2021-03-17-22-18-01.png)
 ![](2021-03-17-22-18-28.png)
+
+<br>
+Resume backend
+
+![](2021-03-17-23-00-24.png)
 
 Package currently including: (please check package.json file)
 
