@@ -20,6 +20,9 @@ install dependencies before start or test
 npm install
 ```
 
+![](2021-03-17-22-18-01.png)
+![](2021-03-17-22-18-28.png)
+
 Package currently including: (please check package.json file)
 
 "bcrypt": "^5.0.0",
