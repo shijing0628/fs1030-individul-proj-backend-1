@@ -1,7 +1,5 @@
 const express = require("express");
 const app = express();
-const mysql = require("mysql");
-
 var cors = require("cors");
 
 const {
@@ -28,7 +26,7 @@ app.use("/users", userRoute);
 app.use("/contact_form", entriesRoute);
 app.use("/auth", authRoute);
 app.use("/portfolio", portfolioRoute);
-app.use("/resume", ResumeRoute);
+app.use("/api/resume", ResumeRoute);
 
 //check if route exist middleware
 app.use("*", routeNotExistError);
