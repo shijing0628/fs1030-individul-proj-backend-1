@@ -5,13 +5,14 @@ const router = express.Router();
 
 router.post("/create", (req, res) => {
   const companyName = req.body.companyName;
-  const job_title = req.body.job_title;
-  const job_desc = req.body.job_desc;
-  const work_date = req.body.work_date;
+  const job_title = req.body.jobTitle;
+  const job_desc = req.body.jobDesc;
+  const company_image = req.body.companyImage;
+  const work_date = req.body.workDate;
 
   db.query(
-    "INSERT INTO resume(companyName,job_title,job_desc,work_date) VALUES (?,?,?,?)",
-    [companyName, job_title, job_desc, work_date],
+    "INSERT INTO resume(companyName,job_title,job_desc,company_image,work_date) VALUES (?,?,?,?,?)",
+    [companyName, job_title, job_desc, company_image, work_date],
     (err, result) => {
       if (err) {
         console.log(err);
@@ -34,16 +35,28 @@ router.get("/", (req, res) => {
     }
   });
 });
-
+router.get("/:id", (req, res) => {
+  let id = req.params.id;
+  db.query(`SELECT * FROM resume WHERE id=${id}`, (err, result) => {
+    if (err) {
+      console.log(err);
+      throw err;
+    } else {
+      res.json(result);
+      console.log("get id data successfully.");
+    }
+  });
+});
 router.put("/update/:id", (req, res) => {
   const companyName = req.body.companyName;
   const job_title = req.body.job_title;
   const job_desc = req.body.job_desc;
+  const company_image = req.body.company_image;
   const work_date = req.body.work_date;
 
   db.query(
-    "UPDATE resume SET companyName=?, job_title=?, job_desc=?,work_date=? WHERE id=?",
-    [companyName, job_title, job_desc, work_date, req.params.id],
+    "UPDATE resume SET companyName=?, job_title=?, job_desc=?, company_image=?,work_date=? WHERE id=?",
+    [companyName, job_title, job_desc, company_image, work_date, req.params.id],
     (err, result) => {
       if (err) {
         console.log(err);
