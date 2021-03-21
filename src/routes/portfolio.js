@@ -5,11 +5,11 @@ const db = require("../../connection");
 const router = express.Router();
 
 router.post("/create", (req, res) => {
-  const proj_name = req.body.proj_name;
-  const proj_desc = req.body.proj_desc;
-  const creator_name = req.body.creator_name;
+  const proj_name = req.body.projectName;
+  const proj_desc = req.body.projectDesc;
+  const creator_name = req.body.creatorName;
   const image = req.body.image;
-  const date_completed = req.body.date_completed;
+  const date_completed = req.body.createDate;
 
   db.query(
     "INSERT INTO portfolio(proj_name, proj_desc, creator_name, image, date_completed) VALUES (?,?,?,?,?)",

@@ -1,4 +1,6 @@
-# Project FS1030 individule portfolio backend
+# Project FS1030 individual portfolio backend
+
+### Admin login Email address must be: brenda@gmail.com, Password: 12345678
 
 **open the repo https://github.com/shijing0628/FS1030-personal-portfolio-proj test together.**
 
@@ -23,13 +25,16 @@ npm install
 <br>
 portfolio backend
 
-![](2021-03-17-22-18-01.png)
+![](2021-03-20-20-37-05.png)
 ![](2021-03-17-22-18-28.png)
 
 <br>
 Resume backend
 
-![](2021-03-17-23-00-24.png)
+![](2021-03-20-20-36-14.png)
+
+Mysql
+![](2021-03-20-20-35-41.png)
 
 Package currently including: (please check package.json file)
 
