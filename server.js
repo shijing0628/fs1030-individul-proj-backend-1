@@ -25,7 +25,7 @@ const ResumeRoute = require("./src/routes/resume");
 app.use("/users", userRoute);
 app.use("/contact_form", entriesRoute);
 app.use("/auth", authRoute);
-app.use("/portfolio", portfolioRoute);
+app.use("/api/portfolio", portfolioRoute);
 app.use("/api/resume", ResumeRoute);
 
 //check if route exist middleware
