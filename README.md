@@ -36,6 +36,9 @@ Resume backend
 Mysql
 ![](2021-03-20-20-35-41.png)
 
+Once user register and login, he can see database stored contact form content
+![](2021-04-01-09-43-29.png)
+
 Package currently including: (please check package.json file)
 
 "bcrypt": "^5.0.0",
