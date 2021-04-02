@@ -1,13 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const { v4: uuidv4 } = require("uuid");
+//const { v4: uuidv4 } = require("uuid");
 //const entriesDB = require('../../data/entriesDB.json')
 const verifyToken = require("../../middleware/verifyToken");
 const dbHandler = require("../dbhandler/dbHandler");
 const { validationCheckEntry } = require("../../middleware/validationCheck");
 const db = require("../../connection");
-const { stringify } = require("flatted");
-var CircularJSON = require("circular-json");
+
 //router.use(validationCheckEntry)
 
 router.get("/entries", verifyToken, async (req, res, next) => {
